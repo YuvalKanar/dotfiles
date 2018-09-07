@@ -20,7 +20,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-expand-region'
 Plug 'chrisbra/NrrwRgn'
 Plug 'gabrielelana/vim-markdown'
-" Plug 'sheerun/vim-polyglot'
 
 " Project exploration
 Plug 'jlanzarotta/bufexplorer'
@@ -47,8 +46,7 @@ Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
-" Plug 'Shougo/neoinclude.vim'
-"
+
 call plug#end()
 
 " Sourcing configurations
