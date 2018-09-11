@@ -43,9 +43,14 @@ set backspace=indent,eol,start
 set colorcolumn=80
 
 " Tab settings
+set tabstop=4
 set softtabstop=4 
 set shiftwidth=4 
 set expandtab
+
+" Display whitespace
+set list
+set listchars=tab:@▸,trail:·,eol:¬
 
 " Folding settings
 set foldmethod=indent

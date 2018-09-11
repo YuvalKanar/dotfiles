@@ -43,10 +43,38 @@ inoremap <expr> <S-tab> pumvisible() ? "<C-p>" : "<S-tab>"
 " Visual mode global replace macro
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
 
-" Denite bindings
-nnoremap <leader>df :Denite file<CR>
-nnoremap <leader>db :Denite buffer<CR>
+" FZF bindings
+nnoremap <C-p> :FZF<CR>
 
 " Misc bindings
 nnoremap <leader>rr :source $MYVIMRC<CR>
 nnoremap zz :update<CR>
+
+" Scrolling
+nnoremap <C-k> <C-y>
+nnoremap <C-j> <C-e>
+
+" Folding
+nnoremap <leader>zc zM
+nnoremap <leader>zo zR
+
+" Snippets
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+

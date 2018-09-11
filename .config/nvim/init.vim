@@ -11,8 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'michalliu/sourcebeautify.vim'
 Plug 'tpope/vim-surround'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+Plug 'godlygeek/tabular'
 Plug 'plytophogy/vim-virtualenv'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'itchyny/calendar.vim'
@@ -20,6 +19,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-expand-region'
 Plug 'chrisbra/NrrwRgn'
 Plug 'gabrielelana/vim-markdown'
+Plug 'suan/vim-instant-markdown'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 
 " Project exploration
 Plug 'jlanzarotta/bufexplorer'
@@ -27,7 +29,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'derekwyatt/vim-fswitch'
 Plug 'tpope/vim-obsession'
 Plug 'dhruvasagar/vim-prosession'
-Plug 'Shougo/denite.nvim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Color schemes
 Plug 'morhetz/gruvbox'
@@ -46,6 +49,7 @@ Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
+Plug 'artur-shaik/vim-javacomplete2'
 
 call plug#end()
 
