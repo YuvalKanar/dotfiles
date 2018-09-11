@@ -1,2 +1,3 @@
 # Neovim
-  This folder contains my configuration files for neovim. <https://neovim.io/>
+
+This subdirectory contains my configuration files for NeoVim: <https://neovim.io/>
