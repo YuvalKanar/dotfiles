@@ -49,6 +49,7 @@ Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 

@@ -7,10 +7,10 @@ au BufLeave * silent! wa
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 set background=dark
-hi Comment cterm=italic
-hi Comment guifg=#5C6370 ctermfg=59
 let g:palenight_terminal_italics=1
-set termguicolors
+" set termguicolors
+
+hi Search cterm=NONE ctermfg=white ctermbg=darkgrey
 
 " Disable line numbers in terminal
 au TermOpen * setlocal nonumber norelativenumber
@@ -24,7 +24,7 @@ set hidden
 set complete-=t
 
 " Disable search highlighting
-set nohlsearch
+" set nohlsearch
 
 " Enable mouse in normal mode
 set mouse=n
@@ -52,9 +52,10 @@ set expandtab
 
 " Display whitespace
 set list
-set listchars=tab:@▸,trail:·,eol:¬
+set listchars=tab:▸·,trail:·,eol:¬
 
 " Folding settings
 set foldmethod=indent
-set foldlevel=1
-set foldclose=all
+set foldlevelstart=99
+" set foldlevel=1
+" set foldclose=all

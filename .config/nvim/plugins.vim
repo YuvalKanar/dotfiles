@@ -1,7 +1,7 @@
 " Python versions control
-let g:virtualenv_directory = '/home/card/.pyenv/versions/'
-let g:python_host_prog = '/home/card/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/home/card/.pyenv/versions/neovim3/bin/python'
+let g:virtualenv_directory = '/home/yuval/.pyenv/versions/'
+let g:python_host_prog = '/home/yuval/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/yuval/.pyenv/versions/neovim3/bin/python'
 
 let NERDTreeMapActivateNode='l'
 
@@ -12,6 +12,8 @@ let g:deoplete#auto_complete_delay = 1
 let g:deoplete#enable_refresh_always = 1
 let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#auto_completion_start_length = 2
+
+let g:jedi#completions_enabled = 0
 
 let g:deoplete#sources = {}
 let g:deoplete#sources._ = []
