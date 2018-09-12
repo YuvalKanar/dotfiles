@@ -22,6 +22,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'suan/vim-instant-markdown'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+" Plug 'majutsushi/tagbar'
 
 " Project exploration
 Plug 'jlanzarotta/bufexplorer'

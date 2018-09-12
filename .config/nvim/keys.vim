@@ -57,6 +57,7 @@ nnoremap <C-j> <C-e>
 " Folding
 nnoremap <leader>zc zM
 nnoremap <leader>zo zR
+nnoremap <leader>zd :set foldlevel=1<CR>
 
 " Snippets
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.

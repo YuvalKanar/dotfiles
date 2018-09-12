@@ -21,6 +21,8 @@ set number
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
+set complete-=t
+
 " Disable search highlighting
 set nohlsearch
 
