@@ -51,4 +51,3 @@ let g:calendar_google_calendar = 1
 " Markdown settings
 let g:instant_markdown_slow = 1
 let g:markdown_enable_spell_checking = 0
-" let g:instant_markdown_autostart = 0

@@ -22,7 +22,6 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'suan/vim-instant-markdown'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-" Plug 'majutsushi/tagbar'
 
 " Project exploration
 Plug 'jlanzarotta/bufexplorer'
@@ -50,7 +49,6 @@ Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
-Plug 'artur-shaik/vim-javacomplete2'
 
 call plug#end()
 
