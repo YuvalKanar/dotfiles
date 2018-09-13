@@ -1,7 +1,7 @@
 " Python versions control
-let g:virtualenv_directory = '/home/yuval/.pyenv/versions/'
-let g:python_host_prog = '/home/yuval/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/home/yuval/.pyenv/versions/neovim3/bin/python'
+let g:virtualenv_directory = '/home/card/.pyenv/versions/'
+let g:python_host_prog = '/home/card/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/card/.pyenv/versions/neovim3/bin/python'
 
 let NERDTreeMapActivateNode='l'
 
