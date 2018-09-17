@@ -58,5 +58,6 @@ set listchars=tab:!▸,trail:·,eol:¬
 
 " Folding settings
 set foldmethod=indent
-set foldlevel=2
-set foldclose=all
+set foldlevelstart=99
+" set foldlevel=2
+" set foldclose=all

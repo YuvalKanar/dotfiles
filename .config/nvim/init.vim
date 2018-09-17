@@ -8,7 +8,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
-Plug 'michalliu/sourcebeautify.vim'
 Plug 'tpope/vim-surround'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
@@ -19,9 +18,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-expand-region'
 Plug 'chrisbra/NrrwRgn'
 Plug 'gabrielelana/vim-markdown'
-Plug 'suan/vim-instant-markdown'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'hdima/python-syntax'
 
 " Project exploration
 Plug 'jlanzarotta/bufexplorer'
@@ -47,6 +46,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-go'
+Plug 'zchee/deoplete-zsh'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
 Plug 'davidhalter/jedi-vim'
@@ -58,4 +58,3 @@ source $HOME/.config/nvim/keys.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/statusline.vim
 source $HOME/.config/nvim/general.vim
-

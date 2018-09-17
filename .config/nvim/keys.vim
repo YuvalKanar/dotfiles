@@ -55,9 +55,12 @@ nnoremap <C-p> :FZF<CR>
 nnoremap <leader>rr :source $MYVIMRC<CR>
 nnoremap zz :update<CR>
 
+
 " Scrolling
-nnoremap <C-k> <C-y>
-nnoremap <C-j> <C-e>
+nnoremap <c-k> <C-y>
+nnoremap <c-j> <C-e>
+
+" Showing dock
 
 " Folding
 nnoremap <leader>zc zM
