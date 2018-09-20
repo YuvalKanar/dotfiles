@@ -34,6 +34,8 @@ let g:neomake_cpp_clang_maker = {
    \ 'args': ['-Wall', '-Iinclude', '-std=c++17'],
    \ }
 
+let g:neomake_javascript_enabled_makers = ['eslint_d']
+
 " python linting
 let g:neomake_python_enabled_makers = ['mypy', 'flake8']
 

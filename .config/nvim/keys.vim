@@ -82,3 +82,6 @@ nnoremap <C-l> :nohl<CR>
 
 " Template loading
 nnoremap <leader>lt :0r ~/.vim/templates/
+
+" Set syntax
+nnoremap <leader>ss :set syntax=

@@ -45,11 +45,13 @@ Plug 'junegunn/seoul256.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-clang'
-Plug 'zchee/deoplete-go'
+Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'zchee/deoplete-zsh'
+Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/echodoc.vim'
 Plug 'neomake/neomake'
 Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/neco-syntax'
 
 call plug#end()
 
