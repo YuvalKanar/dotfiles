@@ -7,7 +7,7 @@ export ZSH="/home/card/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="lukerandall"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -100,3 +100,10 @@ pyenv activate global
 
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
+
+export UBIMO_MYSQL_USER_READ=readonly
+export UBIMO_MYSQL_PASSWORD_READ=Moshemoshe
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+export LANG='en_US.utf8'
