@@ -7,8 +7,6 @@ au BufLeave * silent! wa
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 set background=dark
-" hi Comment cterm=italic
-" hi Comment guifg=#5C6370 ctermfg=59
 let g:palenight_terminal_italics=1
 set termguicolors
 
@@ -24,9 +22,6 @@ set number
 set hidden
 
 set complete-=t
-
-" Disable search highlighting
-" set nohlsearch
 
 " Enable mouse in normal mode
 set mouse=n
@@ -46,18 +41,29 @@ set backspace=indent,eol,start
 
 set colorcolumn=80
 
-" Tab settings
+" Global tab settings
 set tabstop=4
 set softtabstop=4 
 set shiftwidth=4 
 set expandtab
+
+augroup syntaxspecific
+    autocmd!
+    autocmd FileType javascript
+                \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType python
+                \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd FileType vimwiki
+                \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
 
 " Display whitespace
 set list
 set listchars=tab:!▸,trail:·,eol:¬
 
 " Folding settings
-set foldmethod=indent
-set foldlevelstart=99
-" set foldlevel=2
-" set foldclose=all
+" set foldmethod=indent
+" set foldlevelstart=99
+
+set inccommand=nosplit
+set scrolloff=4

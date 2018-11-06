@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-pyenv activate global
+pyenv activate pwn
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -107,3 +107,9 @@ export UBIMO_MYSQL_PASSWORD_READ=Moshemoshe
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 export LANG='en_US.utf8'
+
+alias nv=nvim
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export TERM=screen-256color

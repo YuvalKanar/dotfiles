@@ -7,34 +7,30 @@ let NERDTreeMapActivateNode='l'
 
 let g:echodoc_enable_at_startup = 1
 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#file#enable_buffer_path = 1
-let g:deoplete#auto_completion_start_length = 2
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#auto_complete_delay = 1
+" let g:deoplete#enable_refresh_always = 1
+" let g:deoplete#file#enable_buffer_path = 1
+" let g:deoplete#auto_completion_start_length = 2
+" let g:deoplete#min_pattern_length = 1
 
-let g:jedi#completions_enabled = 0
+" let g:jedi#completions_enabled = 0
 
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = []
-
-let g:deoplete#omni_patterns = {}
-let g:deoplete#omni_patterns.java = '[^. *\t]\.\w*'
-
-let g:deoplete#sources#clang#libclang_path="/usr/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header="/usr/lib/clang"
-if filereadable("compile_commands.json")
-    let g:deoplete#sources#clang#clang_complete_database=getcwd()
-endif
+" let g:deoplete#sources#clang#libclang_path="/usr/lib/libclang.so"
+" let g:deoplete#sources#clang#clang_header="/usr/lib/clang"
+" if filereadable("compile_commands.json")
+"     let g:deoplete#sources#clang#clang_complete_database=getcwd()
+" endif
 
 " cpp linting
-let g:neomake_cpp_enabled_makers = ['clang']
-let g:neomake_cpp_clang_maker = {
-   \ 'exe': 'clang++',
-   \ 'args': ['-Wall', '-Iinclude', '-std=c++17'],
-   \ }
+" let g:neomake_cpp_enabled_makers = []
+" let g:neomake_cpp_enabled_makers = ['clang']
+" let g:neomake_cpp_clang_maker = {
+"    \ 'exe': 'clang++',
+"    \ 'args': ['-Wall', '-Iinclude', '-std=c++17'],
+"    \ }
 
-let g:neomake_javascript_enabled_makers = ['eslint_d']
+" let g:neomake_javascript_enabled_makers = ['jshint', 'jscs']
 
 " python linting
 let g:neomake_python_enabled_makers = ['mypy', 'flake8']

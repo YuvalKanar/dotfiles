@@ -24,6 +24,9 @@ nnoremap <space><C-J> :res +1<CR>
 nnoremap <space><C-K> :res -1<CR>
 nnoremap <space><C-L> :vertical resize +5<CR>
 
+nnoremap <leader><Tab> :bn<CR>
+nnoremap <leader><S-Tab> :bp<CR>
+
 " Windows splits
 nnoremap <space>s <C-w>s
 nnoremap <space>v <C-w>v
@@ -60,8 +63,6 @@ nnoremap zz :update<CR>
 nnoremap <c-k> <C-y>
 nnoremap <c-j> <C-e>
 
-" Showing dock
-
 " Folding
 nnoremap <leader>zc zM
 nnoremap <leader>zo zR
@@ -85,3 +86,7 @@ nnoremap <leader>lt :0r ~/.vim/templates/
 
 " Set syntax
 nnoremap <leader>ss :set syntax=
+
+nnoremap <leader>nm :Neomake<CR>
+
+nnoremap <leader>fs :FSHere<CR>
