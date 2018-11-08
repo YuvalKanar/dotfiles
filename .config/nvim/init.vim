@@ -25,8 +25,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'derekwyatt/vim-fswitch'
-" Plug 'tpope/vim-obsession'
-" Plug 'dhruvasagar/vim-prosession'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -41,12 +39,6 @@ Plug 'jdkanani/vim-material-theme'
 Plug 'junegunn/seoul256.vim'
 
 " Completion
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'zchee/deoplete-jedi'
-" Plug 'zchee/deoplete-clang'
-" Plug 'zchee/deoplete-go', { 'do': 'make' }
-" Plug 'zchee/deoplete-zsh'
-" Plug 'carlitux/deoplete-ternjs'
 Plug 'Shougo/neoinclude.vim'
 Plug 'neomake/neomake'
 Plug 'Shougo/echodoc.vim'

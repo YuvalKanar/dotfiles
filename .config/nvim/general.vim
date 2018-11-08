@@ -28,10 +28,7 @@ set mouse=n
 
 set noshowmode
 
-set completeopt+=menuone
-set completeopt+=noselect
 set completeopt-=preview
-set shortmess+=c
 
 set updatetime=10
 
@@ -60,10 +57,6 @@ augroup END
 " Display whitespace
 set list
 set listchars=tab:!▸,trail:·,eol:¬
-
-" Folding settings
-" set foldmethod=indent
-" set foldlevelstart=99
 
 set inccommand=nosplit
 set scrolloff=4

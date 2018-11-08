@@ -90,3 +90,5 @@ nnoremap <leader>ss :set syntax=
 nnoremap <leader>nm :Neomake<CR>
 
 nnoremap <leader>fs :FSHere<CR>
+
+inoremap <C-o> <C-x><C-o>
