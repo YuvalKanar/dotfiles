@@ -113,3 +113,7 @@ alias nv=nvim
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export TERM=screen-256color
+
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey "^P" vi-up-line-or-history
+bindkey "^N" vi-down-line-or-history
