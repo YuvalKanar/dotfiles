@@ -7,8 +7,15 @@ let NERDTreeMapActivateNode='l'
 
 let g:echodoc_enable_at_startup = 1
 
-" python linting
+" Neomake
+"" Python
 let g:neomake_python_enabled_makers = ['mypy', 'flake8']
+
+let g:neomake_cpp_enabled_makers = []
+let g:neomake_c_enabled_makers = []
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = ""
 
 call neomake#configure#automake('nrw', 1)
 
@@ -22,15 +29,9 @@ augroup omnifuncs
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup end
 
-" Calendar options
-let g:calendar_google_calendar = 1
-
 " Markdown settings
 let g:instant_markdown_slow = 1
 let g:markdown_enable_spell_checking = 0
 
 " Tables
 let g:table_mode_corner='|'
-
-" Wrap
-set nowrap

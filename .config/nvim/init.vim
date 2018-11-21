@@ -9,12 +9,12 @@ Plug 'tpope/vim-surround'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'plytophogy/vim-virtualenv'
-Plug 'itchyny/calendar.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'terryma/vim-expand-region'
 Plug 'chrisbra/NrrwRgn'
 Plug 'vimwiki/vimwiki'
 Plug 'benmills/vimux'
+Plug 'junegunn/goyo.vim'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Ui
 Plug 'vim-airline/vim-airline'
@@ -39,12 +39,9 @@ Plug 'jdkanani/vim-material-theme'
 Plug 'junegunn/seoul256.vim'
 
 " Completion
-Plug 'Shougo/neoinclude.vim'
 Plug 'neomake/neomake'
 Plug 'Shougo/echodoc.vim'
 Plug 'davidhalter/jedi-vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'gabrielelana/vim-markdown'
@@ -52,7 +49,7 @@ Plug 'gabrielelana/vim-markdown'
 call plug#end()
 
 " Sourcing configurations
-source $HOME/.config/nvim/keys.vim
 source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/statusline.vim
 source $HOME/.config/nvim/general.vim
+source $HOME/.config/nvim/keys.vim
