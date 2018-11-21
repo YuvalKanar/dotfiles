@@ -101,9 +101,6 @@ pyenv activate pwn
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
-export UBIMO_MYSQL_USER_READ=readonly
-export UBIMO_MYSQL_PASSWORD_READ=Moshemoshe
-
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 export LANG='en_US.utf8'
