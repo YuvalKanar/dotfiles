@@ -30,7 +30,7 @@
   from it's GitHub repo: <https://github.com/junegunn/vim-plug>. Just follow the
   Neovim instructions.
 
-  And that should be it! If you are using a python environment wrapper you can
+  Third of all, if you are using a python environment wrapper you can
   uncomment the first lines of the `plugins.vim` file and specify the full path
   of the executables.
 
