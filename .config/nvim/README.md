@@ -1,4 +1,4 @@
-# Neovim
+# Neovim dotfiles
   This subdirectory contains my configuration files for NeoVim: <https://neovim.io/>
 
 ## Layout
@@ -18,3 +18,20 @@
 ### general.vim
   This file contains all of the commands which do not go under the other categories.
   This includes tab configuration, colorscheme settings, etc.
+
+
+## Installation
+  There are few steps for installing the configuration.
+
+  First of all, you have to clone and copy the files into NeoVim's configuration
+  folder which by default is `~/.config/nvim/`.
+
+  Second of all, this conf uses vim-plug as it's plugin manager. You can get it
+  from it's GitHub repo: <https://github.com/junegunn/vim-plug>. Just follow the
+  Neovim instructions.
+
+  And that should be it! If you are using a python environment wrapper you can
+  uncomment the first lines of the `plugins.vim` file and specify the full path
+  of the executables.
+
+  Happy Vimming!

@@ -49,7 +49,7 @@ Plug 'gabrielelana/vim-markdown'
 call plug#end()
 
 " Sourcing configurations
-source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/statusline.vim
-source $HOME/.config/nvim/general.vim
-source $HOME/.config/nvim/keys.vim
+source plugins.vim
+source statusline.vim
+source general.vim
+source keys.vim
