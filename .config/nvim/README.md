@@ -27,7 +27,7 @@
   folder which by default is `~/.config/nvim/`.
 
   Second of all, this conf uses vim-plug as it's plugin manager. You can get it
-  from it's GitHub repo: <https://github.com/junegunn/vim-plug>. Just follow the
+  from it's GitHub repo: https://github.com/junegunn/vim-plug. Just follow the
   Neovim instructions.
 
   Third of all, if you are using a python environment wrapper you can

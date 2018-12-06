@@ -1,9 +1,6 @@
 " Use <escape> to exit insert mode in terminal
 tnoremap <Esc> <C-\><C-n>
 
-noremap j gj
-noremap k gk
-
 " Open terminal inside of vim
 nnoremap T :terminal <Enter>
 
@@ -58,6 +55,7 @@ nnoremap <c-k> <C-y>
 nnoremap <c-j> <C-e>
 
 " nnoremap L :nohl<CR>
+nnoremap <leader>a :nohl<CR>
 
 nnoremap <leader>ss :set syntax=
 nnoremap <leader>nm :Neomake<CR>

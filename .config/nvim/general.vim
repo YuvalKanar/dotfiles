@@ -8,12 +8,16 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
 set background=dark
 let g:palenight_terminal_italics=1
-set termguicolors
+
+" set true colors
+if has("termguicolors")
+    set t_8f=\[[38;2;%lu;%lu;%lum
+    set t_8b=\[[48;2;%lu;%lu;%lum
+    set termguicolors
+endif
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=darkgray
-
-hi Search cterm=NONE ctermfg=white ctermbg=darkgrey
 
 " Disable line numbers in terminal
 au TermOpen * setlocal nonumber norelativenumber

@@ -1,7 +1,7 @@
-" Python env
-" let g:virtualenv_directory = '/home/YOURNAME/.pyenv/versions/'
-" let g:python_host_prog = '/home/YOURNAME/.pyenv/versions/neovim2/bin/python'
-" let g:python3_host_prog = '/home/YOURNAME/.pyenv/versions/neovim3/bin/python'
+" Python versions control
+let g:virtualenv_directory = '/home/card/.pyenv/versions/'
+let g:python_host_prog = '/home/card/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/card/.pyenv/versions/neovim3/bin/python'
 
 let NERDTreeMapActivateNode='l'
 
@@ -29,9 +29,17 @@ augroup omnifuncs
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup end
 
-" Markdown settings
-let g:instant_markdown_slow = 1
-let g:markdown_enable_spell_checking = 0
-
 " Tables
 let g:table_mode_corner='|'
+
+" VimWiki
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+let wiki = {}
+let wiki.path = '~/vimwiki/'
+let wiki.syntax = 'markdown'
+let wiki.ext = '.md'
+let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'c': 'c'}
+let g:vimwiki_list = [wiki]
+
+" let g:vimwiki_global_ext = 0

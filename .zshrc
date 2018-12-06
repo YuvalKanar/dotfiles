@@ -92,6 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Default editor
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 pyenv activate pwn
@@ -101,6 +106,8 @@ pyenv activate pwn
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
+export PATH="$PATH:~/.cargo/bin"
+
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 export LANG='en_US.utf8'
@@ -109,8 +116,12 @@ alias nv=nvim
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export TERM=screen-256color
-
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
+
+alias ww="nvim +VimwikiIndex"
+
+# if [[ -f /path/to/mcfly.bash ]]; then
+#   source /path/to/mcfly.bash
+# fi
