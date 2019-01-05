@@ -69,7 +69,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -103,16 +103,14 @@ pyenv activate pwn
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
-
-export PATH="$PATH:~/.cargo/bin"
+# export CC=/usr/bin/clang
+# export CXX=/usr/bin/clang++
 
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
 export LANG='en_US.utf8'
 
-alias nv=nvim
+alias gdb="gdb -q"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -121,7 +119,6 @@ bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
 
 alias ww="nvim +VimwikiIndex"
+alias wt="nvim +VimwikiMakeDiaryNote"
 
-# if [[ -f /path/to/mcfly.bash ]]; then
-#   source /path/to/mcfly.bash
-# fi
+alias m_w="i3-msg move workspace to output"
