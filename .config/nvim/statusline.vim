@@ -1,1 +1,1 @@
-/home/card/.config/nvim/statusline.vim
+set laststatus=2
