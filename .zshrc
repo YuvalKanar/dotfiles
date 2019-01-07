@@ -122,3 +122,5 @@ alias ww="nvim +VimwikiIndex"
 alias wt="nvim +VimwikiMakeDiaryNote"
 
 alias m_w="i3-msg move workspace to output"
+
+alias l="ls -lh"

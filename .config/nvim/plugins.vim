@@ -9,15 +9,58 @@ let g:echodoc_enable_at_startup = 1
 
 " Neomake
 "" Python
-let g:neomake_python_enabled_makers = ['mypy', 'flake8']
+" let g:neomake_python_enabled_makers = ['mypy', 'flake8']
 
-let g:neomake_cpp_enabled_makers = []
-let g:neomake_c_enabled_makers = []
+" let g:neomake_cpp_enabled_makers = []
+" let g:neomake_c_enabled_makers = []
+
+" call neomake#configure#automake('nrw', 1)
+
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
+
+" Fetch semantic type/interface/identifier names on BufEnter and highlight them
+let g:OmniSharp_highlight_types = 1
+
+" augroup omnisharp_commands
+"     autocmd!
+
+"     " When Syntastic is available but not ALE, automatic syntax check on events
+"     " (TextChanged requires Vim 7.4)
+"     " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+
+"     " Show type information automatically when the cursor stops moving
+"     autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+
+"     " Update the highlighting whenever leaving insert mode
+"     autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+
+"     " " Alternatively, use a mapping to refresh highlighting for the current buffer
+"     " autocmd FileType cs nnoremap <buffer> <Leader>th :OmniSharpHighlightTypes<CR>
+
+"     " " The following commands are contextual, based on the cursor position.
+"     " autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
+"     " autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
+"     " autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
+"     " autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
+
+"     " " Finds members in the current buffer
+"     " autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
+
+"     " autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
+"     " autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
+"     " autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
+"     " autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
+"     " autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
+
+"     " " Navigate up and down by method/property/field
+"     " autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
+"     " autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
+" augroup END
 
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = ""
-
-call neomake#configure#automake('nrw', 1)
 
 " omnifuncs
 augroup omnifuncs
