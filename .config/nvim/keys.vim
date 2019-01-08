@@ -67,6 +67,7 @@ nnoremap <leader>vpc :VimuxPromptCommand<CR>
 inoremap <C-o> <C-x><C-o>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-s> <C-x><C-s>
+nnoremap <leader>sp :call ToggleSpell()<CR>
 
 " Buffer scrolling
 nnoremap <leader>bn :bn<CR>
