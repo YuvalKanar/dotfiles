@@ -5,3 +5,7 @@ function ToggleSpell()
         set spell
     endif
 endfunction
+
+function StripTrailingWhiteSpace()
+    %s/\s\+$//e
+endfunction

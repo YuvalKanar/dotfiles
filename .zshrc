@@ -1,3 +1,4 @@
+echo "Card... Look at your hand..."
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -97,12 +98,18 @@ export LANG=en_US.UTF-8
 export VISUAL=nvim
 export EDITOR=$VISUAL
 
+# Sourcing plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Pyenv shit
+# Comment these lines to disable pyenv
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 pyenv activate pwn
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# C/C++ compiler settings
 # export CC=/usr/bin/clang
 # export CXX=/usr/bin/clang++
 
@@ -112,19 +119,27 @@ export LANG='en_US.utf8'
 
 alias gdb="gdb -q"
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
 
+# Vim
+alias n=nvim
+## Vimwiki
 alias ww="nvim +VimwikiIndex"
 alias wt="nvim +VimwikiMakeDiaryNote"
 
-alias m_w="i3-msg move workspace to output"
+# ls'ing
+alias l="ls -lvh"
 
-alias l="ls -lh"
-
+# Jobs
 alias f=fg
 alias b=bg
 alias j=jobs
+
+# newsboat alias
+alias rss=newsboat
+
+alias q=exit
+
+alias rr=". ~/.zshrc"

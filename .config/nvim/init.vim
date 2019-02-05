@@ -3,16 +3,14 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Misc plugins
 Plug 'tpope/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
+Plug 'chrisbra/NrrwRgn'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
-Plug 'vimwiki/vimwiki'
 Plug 'benmills/vimux'
 Plug 'junegunn/goyo.vim'
-" Plug 'chiel92/vim-autoformat'
-" Plug 'chrisbra/NrrwRgn'
 
 " Ui
 Plug 'airblade/vim-gitgutter'
@@ -43,9 +41,8 @@ Plug 'w0rp/ale'
 Plug 'davidhalter/jedi-vim'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'sirver/UltiSnips'
 Plug 'OmniSharp/omnisharp-vim'
-" Plug 'neomake/neomake'
+Plug 'ervandew/supertab'
 
 call plug#end()
 

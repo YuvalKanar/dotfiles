@@ -1,6 +1,9 @@
 filetype plugin on
 filetype indent on
 
+set exrc
+set secure
+
 au BufLeave * silent! wa
 
 " Color configuration
@@ -34,7 +37,7 @@ set secure
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
-set complete=.,w,b,u,t,i
+set complete=.,w,b,u,t,i,k
 
 " Enable mouse in normal mode
 set mouse=n

@@ -7,6 +7,11 @@ let NERDTreeMapActivateNode='l'
 
 let g:echodoc_enable_at_startup = 1
 
+
+
+" " Use deoplete.
+" let g:deoplete#enable_at_startup = 1
+
 " Neomake
 "" Python
 " let g:neomake_python_enabled_makers = ['mypy', 'flake8']
@@ -16,15 +21,19 @@ let g:echodoc_enable_at_startup = 1
 
 " call neomake#configure#automake('nrw', 1)
 
+let g:ale_lint_on_text_changed = 'normal'
+
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
+\ 'c': [],
+\ 'cpp': []
 \}
 
 " Fetch semantic type/interface/identifier names on BufEnter and highlight them
 let g:OmniSharp_highlight_types = 1
 
-" augroup omnisharp_commands
-"     autocmd!
+augroup omnisharp_commands
+    autocmd!
 
 "     " When Syntastic is available but not ALE, automatic syntax check on events
 "     " (TextChanged requires Vim 7.4)
@@ -33,8 +42,8 @@ let g:OmniSharp_highlight_types = 1
 "     " Show type information automatically when the cursor stops moving
 "     autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
-"     " Update the highlighting whenever leaving insert mode
-"     autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+    " Update the highlighting whenever leaving insert mode
+    autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
 
 "     " " Alternatively, use a mapping to refresh highlighting for the current buffer
 "     " autocmd FileType cs nnoremap <buffer> <Leader>th :OmniSharpHighlightTypes<CR>
@@ -57,7 +66,7 @@ let g:OmniSharp_highlight_types = 1
 "     " " Navigate up and down by method/property/field
 "     " autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
 "     " autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
-" augroup END
+augroup END
 
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = ""
@@ -71,6 +80,9 @@ augroup omnifuncs
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup end
+
+let g:SuperTabDefaultCompletionType = "<c-x><c-n>"
+autocmd FileType python let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Markdown settings
 let g:instant_markdown_slow = 1
@@ -89,6 +101,6 @@ let wiki.ext = '.md'
 let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'c': 'c'}
 let g:vimwiki_list = [wiki]
 
-" let g:vimwiki_global_ext = 0
+let g:vimwiki_global_ext = 0
 
 let g:OmniSharp_server_use_mono = 1

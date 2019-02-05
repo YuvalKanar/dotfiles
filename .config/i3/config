@@ -30,8 +30,8 @@ font pango:Source Code Pro Medium 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal -e "tmux a"
-bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Return exec st -e "tmux" "a"     # Attaching
+bindsym $mod+Shift+Return exec st -e "tmux" # Without attaching
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -43,8 +43,8 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+d exec j4-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -169,12 +169,12 @@ mode "h - poweroff, j - reboot, k - suspend, l - hibernate, ; - lock" {
 
 bindsym $mod+x mode "h - poweroff, j - reboot, k - suspend, l - hibernate, ; - lock"
 
-set $bg-color                   #262626
-set $inactive-bg-color          #a3a4a5
+set $bg-color                   #363636
+set $inactive-bg-color          #363636
 set $border-color               #262626
 
 set $text-color                 #f3f4f5
-set $inactive-text-color        #262626
+set $inactive-text-color        #636465
 set $inactive-bright-text-color #636465
 
 set $urgent-bg-color            #e53935
@@ -182,13 +182,11 @@ set $bar_seperator              #757575
 
 # Window colors
 #                       border             background         text                 indicator
-client.focused          $border-color      $border-color      $text-color          #cccccc
+client.focused          $bg-color          $bg-color          $text-color          #cccccc
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #cccccc
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #cccccc
 client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          #cccccc
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
     tray_output primary
     status_command i3blocks
@@ -206,19 +204,18 @@ bindsym $mod+Shift+f exec "/home/card/Documents/Computers_Stuff/scripts/manage_d
 
 exec "~/Documents/Computers_Stuff/scripts/fix.sh"
 exec "xbacklight = 50"
-# exec --no-startup-id "compton &"
+# exec --no-startup-id "compton"
 exec --no-startup-id "nm-applet"
 exec_always "/home/card/Documents/Computers_Stuff/scripts/wallpaper.sh"
 
 # xinput configurations
 exec "/home/card/Documents/Computers_Stuff/scripts/xinput.sh"
 
-gaps inner 20
+gaps inner 10
+gaps outer 7
 smart_gaps on
-# Top name bar remove
-new_window 1pixel
-# Border remove
-for_window [class="^.*"] border pixel 1
+default_border normal
+title_align center
 
 focus_follows_mouse no
 

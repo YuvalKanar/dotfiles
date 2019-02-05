@@ -37,11 +37,11 @@ nnoremap <tab> :NERDTreeToggle<CR>
 " Remapping semi-colon for convenience
 nnoremap ; :
 
-" Auto-completion pop-up window configuration
-inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
-inoremap <expr> ( pumvisible() ? "<C-y>(" : "("
-imap <expr> <tab> pumvisible() ? "<C-n>" : "<tab>"
-inoremap <expr> <S-tab> pumvisible() ? "<C-p>" : "<S-tab>"
+" " Auto-completion pop-up window configuration
+" inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
+" inoremap <expr> ( pumvisible() ? "<C-y>(" : "("
+" imap <expr> <tab> pumvisible() ? "<C-n>" : "<tab>"
+" inoremap <expr> <S-tab> pumvisible() ? "<C-p>" : "<S-tab>"
 
 " Visual mode global replace macro
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>

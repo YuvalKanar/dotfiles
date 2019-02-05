@@ -49,11 +49,20 @@ markup=none
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 
+[rhythmbox]
+interval=3
+
 [spotify]
 label=
 command=~/.config/i3blocks/spotify/spotify.py
 color=#81b71a
 interval=3
+
+# [mediaplayer]
+# command=$SCRIPT_DIR/mediaplayer
+# instance=spotify
+# interval=3
+# signal=10
 
 [disk]
 label=Root
