@@ -44,11 +44,11 @@ set mouse=n
 
 " set noshowmode
 
-set completeopt=menu
+set completeopt=menu,longest
 
 set updatetime=10
 
-set cursorline
+" set cursorline
 
 set backspace=indent,eol,start
 
@@ -73,7 +73,7 @@ set list
 set listchars=tab:!▸,trail:·,eol:¬
 
 " Option for substitute commands
-set inccommand=nosplit
+" set inccommand=nosplit
 
 " Scroll offset
 set scrolloff=4

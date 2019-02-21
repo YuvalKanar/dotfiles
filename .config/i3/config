@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st -e "tmux" "a"     # Attaching
-bindsym $mod+Shift+Return exec st -e "tmux" # Without attaching
+bindsym $mod+Shift+Return exec st -e "tmux"   # Without attaching
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -94,7 +94,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1 "
 set $ws2 "2 "
-set $ws3 "3 "
+set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
 set $ws6 "6 "
@@ -158,9 +158,9 @@ bindsym $mod+r mode "resize"
 mode "h - poweroff, j - reboot, k - suspend, l - hibernate, ; - lock" {
     bindsym h exec "poweroff"
     bindsym j exec "reboot"
-    bindsym k exec "/home/card/Documents/Computers_Stuff/scripts/lock.sh && systemctl suspend && i3-msg mode default"
-    bindsym l exec "/home/card/Documents/Computers_Stuff/scripts/lock.sh && systemctl hibernate && i3-msg mode default"
-    bindsym semicolon exec "/home/card/Documents/Computers_Stuff/scripts/lock.sh && i3-msg mode default"
+    bindsym k exec "i3-msg mode default && /home/card/Documents/Computers_Stuff/scripts/lock.sh && systemctl suspend"
+    bindsym l exec "i3-msg mode default && /home/card/Documents/Computers_Stuff/scripts/lock.sh && systemctl hibernate"
+    bindsym semicolon exec "i3-msg mode default ; /home/card/Documents/Computers_Stuff/scripts/lock_dpms.sh"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"   
@@ -202,19 +202,20 @@ bar {
 
 bindsym $mod+Shift+f exec "/home/card/Documents/Computers_Stuff/scripts/manage_displays.sh"
 
-exec "~/Documents/Computers_Stuff/scripts/fix.sh"
-exec "xbacklight = 50"
+exec --no-startup-id "~/Documents/Computers_Stuff/scripts/fix.sh"
+exec --no-startup-id "xbacklight = 50"
 # exec --no-startup-id "compton"
 exec --no-startup-id "nm-applet"
-exec_always "/home/card/Documents/Computers_Stuff/scripts/wallpaper.sh"
+exec_always --no-startup-id "/home/card/Documents/Computers_Stuff/scripts/wallpaper.sh"
 
 # xinput configurations
-exec "/home/card/Documents/Computers_Stuff/scripts/xinput.sh"
+exec --no-startup-id "/home/card/Documents/Computers_Stuff/scripts/xinput.sh"
 
-gaps inner 10
-gaps outer 7
-smart_gaps on
-default_border normal
+# dpms settings
+exec --no-startup-id "xset s 0 0"
+exec --no-startup-id "xset dpms 0 0 0"
+exec --no-startup-id "xset -dpms"
+
 title_align center
 
 focus_follows_mouse no
@@ -227,3 +228,9 @@ bindsym XF86MonBrightnessUp exec xbacklight + 5 && pkill -SIGRTMIN+20 i3blocks
 bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -SIGRTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer set Master toggle && pkill -SIGRTMIN+10 i3blocks
+
+# Media Player Controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous

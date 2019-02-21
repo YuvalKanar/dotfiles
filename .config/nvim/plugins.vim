@@ -25,8 +25,6 @@ let g:ale_lint_on_text_changed = 'normal'
 
 let g:ale_linters = {
 \ 'cs': ['OmniSharp'],
-\ 'c': [],
-\ 'cpp': []
 \}
 
 " Fetch semantic type/interface/identifier names on BufEnter and highlight them
@@ -81,7 +79,7 @@ augroup omnifuncs
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup end
 
-let g:SuperTabDefaultCompletionType = "<c-x><c-n>"
+let g:SuperTabDefaultCompletionType = "<c-n>"
 autocmd FileType python let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Markdown settings

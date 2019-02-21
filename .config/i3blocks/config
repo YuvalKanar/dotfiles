@@ -123,7 +123,7 @@ interval=10
 [volume]
 command=/home/card/.config/i3blocks/volume/volume
 label=♪
-interval=once
+interval=5
 signal=10
 # label=VOL
 # STEP=5%
@@ -134,10 +134,14 @@ interval=once
 signal=20
 
 # Date Time
-#
 [time]
 command=date +%d.%m.%Y\ %I:%M%P
 interval=5
+separator=false
+
+# Keyboard layout
+[layout]
+interval=1
 
 # Generic media player support
 #

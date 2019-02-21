@@ -11,6 +11,7 @@ Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'benmills/vimux'
 Plug 'junegunn/goyo.vim'
+Plug 'markonm/traces.vim'
 
 " Ui
 Plug 'airblade/vim-gitgutter'
@@ -20,6 +21,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'derekwyatt/vim-fswitch'
 
 " Color schemes
 Plug 'morhetz/gruvbox'
