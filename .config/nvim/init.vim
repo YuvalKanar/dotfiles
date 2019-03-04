@@ -45,6 +45,7 @@ Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ervandew/supertab'
+Plug 'tclem/vim-arduino'
 
 call plug#end()
 
