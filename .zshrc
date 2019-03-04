@@ -1,4 +1,3 @@
-echo "Card... Look at your hand..."
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +7,7 @@ export ZSH="/home/card/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="lukerandall"
+ZSH_THEME="shaggy"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -118,6 +117,9 @@ export GOPATH=$(go env GOPATH)
 export LANG='en_US.utf8'
 
 alias gdb="gdb -q"
+
+bindkey -v
+export KEYTIMEOUT=1
 
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey "^P" vi-up-line-or-history
