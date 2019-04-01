@@ -27,15 +27,15 @@ nnoremap <space><C-J> :res +1<CR>
 nnoremap <space><C-K> :res -1<CR>
 nnoremap <space><C-L> :vertical resize +5<CR>
 
-" Windows splits
-nnoremap <space>s <C-w>s
-nnoremap <space>v <C-w>v
+" Windows splits inside tmux
+nnoremap <space>s :silent !tmux split-window -v nvim <CR>
+nnoremap <space>v :silent !tmux split-window -h nvim <CR>
 
 " NERDTree toggling
 nnoremap <tab> :NERDTreeToggle<CR>
 
 " Remapping semi-colon for convenience
-nnoremap ; :
+" nnoremap ; :
 
 " " Auto-completion pop-up window configuration
 " inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
@@ -80,3 +80,5 @@ nnoremap <leader>zm :Goyo<CR>
 " Creation shortcuts
 nnoremap <leader>ct :!ctags -R .<CR>
 nnoremap <leader>cm :!cmake .<CR>
+
+nmap <C-s> :w<CR>

@@ -1,9 +1,6 @@
 filetype plugin on
 filetype indent on
 
-set exrc
-set secure
-
 au BufLeave * silent! wa
 
 " Color configuration

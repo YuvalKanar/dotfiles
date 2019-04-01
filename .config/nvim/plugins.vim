@@ -102,3 +102,6 @@ let g:vimwiki_list = [wiki]
 let g:vimwiki_global_ext = 0
 
 let g:OmniSharp_server_use_mono = 1
+
+let g:Hexokinase_ftAutoload = ['css', 'xml', 'html', ]
+let g:Illuminate_delay = 100

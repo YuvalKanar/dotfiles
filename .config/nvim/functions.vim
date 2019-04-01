@@ -1,4 +1,4 @@
-function ToggleSpell()
+function! ToggleSpell()
     if &spell
         set nospell
     else
@@ -6,6 +6,6 @@ function ToggleSpell()
     endif
 endfunction
 
-function StripTrailingWhiteSpace()
+function! StripTrailingWhiteSpace()
     %s/\s\+$//e
 endfunction

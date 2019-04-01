@@ -12,6 +12,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'benmills/vimux'
 Plug 'junegunn/goyo.vim'
 Plug 'markonm/traces.vim'
+Plug 'RRethy/vim-illuminate'
+Plug 'RRethy/vim-hexokinase'
 
 " Ui
 Plug 'airblade/vim-gitgutter'
@@ -38,14 +40,15 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'blueshirts/darcula'
 Plug 'tyrannicaltoucan/vim-deep-space'
 
+
 " Completion
 Plug 'w0rp/ale'
 Plug 'davidhalter/jedi-vim'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'OmniSharp/omnisharp-vim'
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'ervandew/supertab'
-Plug 'tclem/vim-arduino'
 
 call plug#end()
 

@@ -143,6 +143,10 @@ separator=false
 [layout]
 interval=1
 
+# [shutdown-button]
+# full_text=
+# interval=once
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.
