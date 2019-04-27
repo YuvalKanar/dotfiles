@@ -104,7 +104,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Comment these lines to disable pyenv
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-pyenv activate pwn
+pyenv activate python3
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

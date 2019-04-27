@@ -14,6 +14,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'markonm/traces.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'RRethy/vim-hexokinase'
+Plug 'jiangmiao/auto-pairs'
 
 " Ui
 Plug 'airblade/vim-gitgutter'

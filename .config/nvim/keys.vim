@@ -11,37 +11,8 @@ nnoremap T :terminal <Enter>
 nnoremap <space>t :tabnext <Enter>
 nnoremap <space>T :tabnew <Enter>
 
-" Window manipulation
-nnoremap <space>h <C-w>h
-nnoremap <space>j <C-w>j
-nnoremap <space>k <C-w>k
-nnoremap <space>l <C-w>l
-
-nnoremap <space>H <C-w>H
-nnoremap <space>J <C-w>J
-nnoremap <space>K <C-w>K
-nnoremap <space>L <C-w>L
-
-nnoremap <space><C-H> :vertical resize -5<CR>
-nnoremap <space><C-J> :res +1<CR>
-nnoremap <space><C-K> :res -1<CR>
-nnoremap <space><C-L> :vertical resize +5<CR>
-
-" Windows splits inside tmux
-nnoremap <space>s :silent !tmux split-window -v nvim <CR>
-nnoremap <space>v :silent !tmux split-window -h nvim <CR>
-
 " NERDTree toggling
 nnoremap <tab> :NERDTreeToggle<CR>
-
-" Remapping semi-colon for convenience
-" nnoremap ; :
-
-" " Auto-completion pop-up window configuration
-" inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
-" inoremap <expr> ( pumvisible() ? "<C-y>(" : "("
-" imap <expr> <tab> pumvisible() ? "<C-n>" : "<tab>"
-" inoremap <expr> <S-tab> pumvisible() ? "<C-p>" : "<S-tab>"
 
 " Visual mode global replace macro
 vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>

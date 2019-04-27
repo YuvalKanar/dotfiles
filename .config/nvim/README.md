@@ -1,5 +1,5 @@
-# Neovim dotfiles
-  This subdirectory contains my configuration files for NeoVim: <https://neovim.io/>
+# [Neovim](https://neovim.io/) dotfiles
+![My Neovim](img/nvim.png)
 
 ## Layout
   The configuration files are devided into five core files. init.vim is the main

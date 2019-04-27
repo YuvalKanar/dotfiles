@@ -78,3 +78,5 @@ set scrolloff=4
 set wrap
 
 " set cmdheight=2
+
+set splitright
