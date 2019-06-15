@@ -183,4 +183,6 @@ bindkey '^T' fzf-file-widget
 alias clock="tty-clock -c"
 alias year="cal -y"
 
+alias blue="bluetoothctl"
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

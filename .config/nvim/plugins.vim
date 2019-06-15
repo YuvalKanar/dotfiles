@@ -5,9 +5,7 @@ let g:python3_host_prog = '/home/card/.pyenv/versions/neovim3/bin/python'
 
 let NERDTreeMapActivateNode='l'
 
-let g:echodoc_enable_at_startup = 1
-
-
+" let g:echodoc_enable_at_startup = 1
 
 " " Use deoplete.
 " let g:deoplete#enable_at_startup = 1
@@ -29,6 +27,7 @@ let g:ale_linters = {
 
 " Fetch semantic type/interface/identifier names on BufEnter and highlight them
 let g:OmniSharp_highlight_types = 1
+let g:OmniSharp_server_use_mono = 1
 
 augroup omnisharp_commands
     autocmd!
@@ -83,8 +82,8 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 autocmd FileType python let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 
 " Markdown settings
-let g:instant_markdown_slow = 1
-let g:markdown_enable_spell_checking = 0
+" let g:instant_markdown_slow = 1
+" let g:markdown_enable_spell_checking = 0
 
 " Tables
 let g:table_mode_corner='|'
@@ -101,7 +100,7 @@ let g:vimwiki_list = [wiki]
 
 let g:vimwiki_global_ext = 0
 
-let g:OmniSharp_server_use_mono = 1
-
-let g:Hexokinase_ftAutoload = ['css', 'xml', 'html', ]
+let g:Hexokinase_ftAutoload = ['css', 'xml', 'html']
 let g:Illuminate_delay = 100
+
+let g:indentLine_setColors = 1

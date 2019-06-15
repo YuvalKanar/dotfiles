@@ -53,3 +53,11 @@ nnoremap <leader>ct :!ctags -R .<CR>
 nnoremap <leader>cm :!cmake .<CR>
 
 nmap <C-s> :w<CR>
+
+imap <C-a> <esc>gg0vG$
+
+" coc keybindings
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif

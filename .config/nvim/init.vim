@@ -15,6 +15,7 @@ Plug 'markonm/traces.vim'
 Plug 'RRethy/vim-illuminate'
 Plug 'RRethy/vim-hexokinase'
 Plug 'jiangmiao/auto-pairs'
+" Plug 'Yggdroot/indentLine'
 
 " Ui
 Plug 'airblade/vim-gitgutter'
@@ -43,13 +44,14 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 
 
 " Completion
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
+" Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'OmniSharp/omnisharp-vim'
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-Plug 'ervandew/supertab'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 call plug#end()
 

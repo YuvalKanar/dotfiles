@@ -80,3 +80,6 @@ set wrap
 " set cmdheight=2
 
 set splitright
+
+" Disable :intro on launch
+set shortmess+=I

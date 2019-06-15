@@ -77,18 +77,25 @@ interval=30
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-[iface]
+# [iface]
 #IFACE=wlan0
+# color=#00FF00
+# interval=10
+
+[is_internet_on]
+# IFACE=wlp2s0
+label=DHCP
 color=#00FF00
 interval=10
 
+
 [wifi]
-#INTERFACE=wlp3s0
+# INTERFACE=wlp2s0
 label=wifi:
 interval=10
 
 #[bandwidth]
-##INTERFACE=eth0
+#INTERFACE=eth0
 #interval=5
 
 [load_average]

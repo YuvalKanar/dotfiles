@@ -206,6 +206,9 @@ exec --no-startup-id "xset s 0 0"
 exec --no-startup-id "xset dpms 0 0 0"
 exec --no-startup-id "xset -dpms"
 
+# light-locker
+exec --no-startup-id "light-locker --lock-on-suspend"
+
 title_align center
 
 focus_follows_mouse no
