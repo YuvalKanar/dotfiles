@@ -105,5 +105,5 @@ let g:Illuminate_delay = 100
 
 let g:indentLine_setColors = 1
 
-call coc#add_extension('coc-emoji', 'coc-java', 'coc-json', 'coc-omni', 'coc-phpls', 'coc-python', 'coc-syntax', 'coc-tag', 'coc-vimlsp')
+" call coc#add_extension('coc-emoji', 'coc-java', 'coc-json', 'coc-omni', 'coc-phpls', 'coc-python', 'coc-syntax', 'coc-tag', 'coc-vimlsp')
 

@@ -44,14 +44,14 @@ Plug 'tyrannicaltoucan/vim-deep-space'
 
 
 " Completion
-" Plug 'w0rp/ale'
-" Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'davidhalter/jedi-vim'
 Plug 'hdima/python-syntax'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 call plug#end()
 

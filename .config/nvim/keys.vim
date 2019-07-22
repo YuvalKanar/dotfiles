@@ -57,10 +57,10 @@ nmap <C-s> :w<CR>
 imap <C-a> <esc>gg0vG$
 
 " coc keybindings
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" inoremap <expr> <tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<c-g>u\<cr>"
+" autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " TextWidth toggle
 nnoremap <leader>tw :call ToggleTextWidth()<CR>
