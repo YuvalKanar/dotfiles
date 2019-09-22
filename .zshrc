@@ -160,5 +160,8 @@ alias blue="bluetoothctl"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+# Ruby path
+export PATH="$PATH:/home/card/.gem/ruby/2.6.0/bin"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended"
