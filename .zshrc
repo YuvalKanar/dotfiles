@@ -94,7 +94,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Default editor
-export VISUAL=nvim
+export VISUAL=vim
 export EDITOR=$VISUAL
 
 # Sourcing plugins
@@ -104,7 +104,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Comment these lines to disable pyenv
 eval "$(pyenv init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-pyenv activate python3
+#pyenv activate python3
 
 
 # C/C++ compiler settings
@@ -123,12 +123,11 @@ export KEYTIMEOUT=1
 
 bindkey "^P" vi-up-line-or-history
 bindkey "^N" vi-down-line-or-history
+bindkey "^R" history-incremental-search-backward
 
-# Vim
-alias n=nvim
-## Vimwiki
-alias ww="nvim +VimwikiIndex"
-alias wt="nvim +VimwikiMakeDiaryNote"
+# Vimwiki
+alias ww="vim +VimwikiIndex"
+alias wt="vim +VimwikiMakeDiaryNote"
 
 # ls'ing
 alias l="ls -lvh"
@@ -165,3 +164,7 @@ export PATH="$PATH:/home/card/.gem/ruby/2.6.0/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended"
+
+stty -ixon
+
+alias gentags="ctags -R ."
