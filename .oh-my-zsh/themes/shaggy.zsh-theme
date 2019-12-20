@@ -17,10 +17,17 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
+function print_jobs {
+    count=$(jobs | wc -l)
+    if (( count > 0 )); then
+        printf " $count"
+    fi
+}
+
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-PROMPT='%{$fg_bold[cyan]%}[%n@%m]%{$reset_color%} %{$fg_bold[blue]%}{%3~}%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}${return_code}%B$%b '
+PROMPT='%{$fg_bold[cyan]%}[%n@%m]%{$reset_color%} %{$fg_bold[blue]%}{%3~}%{$reset_color%}%{$fg_bold[yellow]%}$(print_jobs)%{$reset_color%} $(my_git_prompt_info)%{$reset_color%}${return_code}%B$%b '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") %{$reset_color%}"

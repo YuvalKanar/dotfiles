@@ -102,8 +102,8 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Pyenv shit
 # Comment these lines to disable pyenv
-eval "$(pyenv init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+#eval "$(pyenv init -)"
+#export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 #pyenv activate python3
 
 
@@ -130,17 +130,7 @@ alias ww="vim +VimwikiIndex"
 alias wt="vim +VimwikiMakeDiaryNote"
 
 # ls'ing
-alias l="ls -lvh"
-
-# Jobs
-alias f=fg
-alias b=bg
-alias j=jobs
-
-# newsboat alias
-alias rss=newsboat
-
-alias q=exit
+alias l="ls -lavh"
 
 alias rr=". ~/.zshrc"
 
@@ -152,11 +142,6 @@ ranger() {
     fi
 }
 
-alias clock="tty-clock -c"
-alias year="cal -y"
-
-alias blue="bluetoothctl"
-
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Ruby path
@@ -166,5 +151,3 @@ export PATH="$PATH:/home/card/.gem/ruby/2.6.0/bin"
 export FZF_DEFAULT_OPTS="--extended"
 
 stty -ixon
-
-alias gentags="ctags -R ."

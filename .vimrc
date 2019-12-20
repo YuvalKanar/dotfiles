@@ -13,6 +13,13 @@ Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
 Plug 'artur-shaik/vim-javacomplete2'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'fatih/vim-go'
+" Plug 'sheerun/vim-polyglot'
+
+" Completion
+Plug 'fatih/vim-go'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'dense-analysis/ale'
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""
@@ -20,8 +27,8 @@ call plug#end()
 """ Generic Configuration
 """""""""""""""""""""""""""""""""""""
 set number
-set relativenumber
-set mouse=n
+" set relativenumber
+set mouse=a
 set wrap
 set showcmd
 set tabstop=4
@@ -34,6 +41,7 @@ set laststatus=2
 set linebreak
 set hidden
 set splitright
+set incsearch
 
 set exrc
 set secure
@@ -69,12 +77,12 @@ augroup END
 """ SuperTab
 """""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "<c-n>"
-autocmd FileType python let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+autocmd FileType python,go let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<c-g>u\<cr>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 """""""""""""""""""""""""""""""""""""
 
-""" Jedi
+""" Python Jedi
 """""""""""""""""""""""""""""""""""""
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = ""
