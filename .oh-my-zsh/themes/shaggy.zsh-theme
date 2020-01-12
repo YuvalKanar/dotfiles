@@ -18,7 +18,7 @@ function zle-line-init zle-keymap-select {
 }
 
 function print_jobs {
-    count=$(jobs | wc -l)
+    count=$(jobs | grep -v '\(pwd now: .*\)' | wc -l)
     if (( count > 0 )); then
         printf " $count"
     fi

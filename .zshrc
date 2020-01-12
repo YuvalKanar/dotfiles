@@ -151,3 +151,7 @@ export PATH="$PATH:/home/card/.gem/ruby/2.6.0/bin"
 export FZF_DEFAULT_OPTS="--extended"
 
 stty -ixon
+
+function godoc {
+    go doc $1 | less
+}

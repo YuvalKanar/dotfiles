@@ -1,4 +1,7 @@
+scriptencoding utf-8
 set nocompatible
+set encoding=utf-8
+set fileformat=unix
 syntax on
 filetype plugin indent on
 
@@ -11,15 +14,13 @@ Plug 'morhetz/gruvbox'
 Plug 'ervandew/supertab'
 Plug 'vimwiki/vimwiki'
 Plug 'junegunn/goyo.vim'
-Plug 'artur-shaik/vim-javacomplete2'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'fatih/vim-go'
-" Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
 
 " Completion
 Plug 'fatih/vim-go'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'dense-analysis/ale'
+Plug 'davidhalter/jedi-vim'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""
@@ -27,24 +28,41 @@ call plug#end()
 """ Generic Configuration
 """""""""""""""""""""""""""""""""""""
 set number
-" set relativenumber
 set mouse=a
+set ttymouse=xterm2
 set wrap
 set showcmd
 set tabstop=4
-set softtabstop=4
+set softtabstop=1
 set shiftwidth=4
-set expandtab
+set noexpandtab
+set autoindent
 set scrolloff=4
 set shortmess+=I
 set laststatus=2
 set linebreak
 set hidden
 set splitright
+set splitbelow
 set incsearch
+set ignorecase
+set smartcase
+set ruler
+set hlsearch
+
+" Wildmenu
+set wildmenu
+set wildmode=full
+
+set colorcolumn=80
 
 set exrc
 set secure
+
+set list
+set listchars=tab:\|\ ,trail:·,eol:¬
+
+set conceallevel=2
 """""""""""""""""""""""""""""""""""""
 
 """ Omnifuncs
@@ -65,12 +83,14 @@ augroup end
 augroup syntaxspecific
     autocmd!
     autocmd FileType javascript
-                \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+                \ setlocal tabstop=2 shiftwidth=2
     autocmd FileType vimwiki
-                \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+                \ setlocal tabstop=2 shiftwidth=2
     autocmd FileType python
-                \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
+                \ setlocal tabstop=4 shiftwidth=4
 augroup END
+
+let g:python_recommended_style=0
 """""""""""""""""""""""""""""""""""""
 
 
@@ -98,6 +118,8 @@ let wiki.syntax = 'markdown'
 let wiki.ext = '.md'
 let wiki.nested_syntaxes = {'python': 'python', 'cpp': 'cpp', 'c': 'c'}
 let g:vimwiki_list = [wiki]
+
+let g:vimwiki_global_ext = 0
 """""""""""""""""""""""""""""""""""""
 
 """ Colorscheme
@@ -109,11 +131,20 @@ color gruvbox
 
 """ Keybindings
 """""""""""""""""""""""""""""""""""""
-nnoremap ww :VimwikiIndex<CR>
+nnoremap <silent> <leader>a :nohlsearch<cr>
 """""""""""""""""""""""""""""""""""""
 
 """ Misc
 """""""""""""""""""""""""""""""""""""
 " Restore cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" ALE
+let g:ale_set_loclist=0
+" 'cd' towards the directory in which the current file is edited
+" but only change the path for the current window
+nnoremap <silent> <leader>cd :lcd %:h<CR>
+
+" Open files located in the same dir in with the current file is edited
+nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
 """""""""""""""""""""""""""""""""""""
