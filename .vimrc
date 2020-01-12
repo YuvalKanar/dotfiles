@@ -147,4 +147,9 @@ nnoremap <silent> <leader>cd :lcd %:h<CR>
 
 " Open files located in the same dir in with the current file is edited
 nnoremap <leader>ew :e <C-R>=expand("%:.:h") . "/"<CR>
+
+" Read only buffers are also non-modifiable
+autocmd BufReadPre * if &readonly | setl nomodifiable | endif
+autocmd OptionSet * if expand('<amatch>') == "readonly" && v:option_new == 1 | setl nomodifiable | endif
+autocmd OptionSet * if expand('<amatch>') == "readonly" && v:option_new == 0 | setl modifiable | endif
 """""""""""""""""""""""""""""""""""""
